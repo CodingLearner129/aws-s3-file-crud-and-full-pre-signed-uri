@@ -1,4 +1,5 @@
 # aws-s3-file-crud-and-full-pre-signed-uri
+
 How to use this component???
 
 1. Run below command to install dependencies of aws-s3 for laravel
@@ -11,6 +12,8 @@ How to use this component???
 4. Update environment variables in your .env file like this component's .env file
 
 5. Now you can use this component's function ex. Aws::uploadFileS3Bucket('file/example', $request->file)
+
+There is a postman file for the demo of upload file to perSignedURL
 
 So now, setup of this component is done.
 Best of luck guys,
