@@ -24,7 +24,7 @@ class Aws
      * Upload any file to aws s3 bucket
      *
      * @param  string  $filePath (like: example/example)
-     * @param  object  $setFile request File you want to store (like: $request->file)
+     * @param  object  $setFile request File you want to store (like: $request->file, new File('/path'))
      * @param string $getFile (optional) File uri from database
      * @return string uploaded file path
      */
