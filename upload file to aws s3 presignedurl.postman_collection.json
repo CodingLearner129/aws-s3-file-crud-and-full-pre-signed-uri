@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "d9439612-7b31-4009-aa24-e87d3878e680",
+		"name": "upload file to aws s3 presignedurl",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20461760"
+	},
+	"item": [
+		{
+			"name": "https://javago-intelivita-bucket.s3.eu-west-2.amazonaws.com/images/test/%242y%2410%24CO140iIBMUB9Pn8VkS.IO.Y90v6t3Bq/Fry65mLJimNxW4C1RpTc..png?x-amz-acl=public-read&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AK",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/C:/Users/user/Pictures/Screen Lock/10_gettyimages-638579890_super_resized.jpg"
+					}
+				},
+				"url": {
+					"raw": "https://javago-intelivita-bucket.s3.eu-west-2.amazonaws.com/images/test/%242y%2410%24CO140iIBMUB9Pn8VkS.IO.Y90v6t3Bq/Fry65mLJimNxW4C1RpTc..png?x-amz-acl=public-read&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVK546CJFGDTYTINK%2F20230329%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230329T093123Z&X-Amz-SignedHeaders=host%3Bx-amz-acl&X-Amz-Expires=600&X-Amz-Signature=474498ca4b99e021e496fc64199071695a03848c89ba935d5d288fd46effa5e6",
+					"protocol": "https",
+					"host": [
+						"javago-intelivita-bucket",
+						"s3",
+						"eu-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"images",
+						"test",
+						"%242y%2410%24CO140iIBMUB9Pn8VkS.IO.Y90v6t3Bq",
+						"Fry65mLJimNxW4C1RpTc..png"
+					],
+					"query": [
+						{
+							"key": "x-amz-acl",
+							"value": "public-read"
+						},
+						{
+							"key": "X-Amz-Content-Sha256",
+							"value": "UNSIGNED-PAYLOAD"
+						},
+						{
+							"key": "X-Amz-Algorithm",
+							"value": "AWS4-HMAC-SHA256"
+						},
+						{
+							"key": "X-Amz-Credential",
+							"value": "AKIAVK546CJFGDTYTINK%2F20230329%2Feu-west-2%2Fs3%2Faws4_request"
+						},
+						{
+							"key": "X-Amz-Date",
+							"value": "20230329T093123Z"
+						},
+						{
+							"key": "X-Amz-SignedHeaders",
+							"value": "host%3Bx-amz-acl"
+						},
+						{
+							"key": "X-Amz-Expires",
+							"value": "600"
+						},
+						{
+							"key": "X-Amz-Signature",
+							"value": "474498ca4b99e021e496fc64199071695a03848c89ba935d5d288fd46effa5e6"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
