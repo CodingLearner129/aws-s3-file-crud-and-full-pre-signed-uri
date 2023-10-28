@@ -25,8 +25,8 @@ class Aws
      *
      * @param  string  $filePath (like: example/example)
      * @param  object  $setFile request File you want to store (like: $request->file, new File('/path'))
-     * @param string $getFile (optional) File uri from database
-     * @return string uploaded file path
+     * @param  string  $getFile (optional) File uri from database
+     * @return string  uploaded file path
      */
     public static function uploadFileS3Bucket(string $filePath, object $setFile, string $getFile = ''): string
     {
@@ -80,12 +80,12 @@ class Aws
      * Upload any file to aws s3 bucket to using presignedUri 
      *
      * @param  string  $filePath (like: example/example)
-     * @param  string  $fileName file name you want to store md5_file($fileName) or uniqid() or without encryption,
      * @param  string  $extension file extension you want to store,
-     * @param string $getFile (optional) File uri from database
-     * @return array fileUri file path to stored in database and presignedUri on which file being uploaded 
+     * @param  string  $fileName (optional) file name you want to store md5_file($fileName) or uniqid() or without encryption,
+     * @param  string  $getFile (optional) File uri from database
+     * @return array   fileUri file path to stored in database and presignedUri on which file being uploaded 
      */
-    public static function presignedUriUpload(string $filePath, string $fileName, string $extension, string $getFile = ''): array
+    public static function presignedUriUpload(string $filePath, string $extension, string $fileName = '', string $getFile = ''): array
     {
         try {
             if ($getFile != '') {
@@ -99,7 +99,7 @@ class Aws
                 'Bucket' => $bucket,
                 'Key' => $key,
                 // 'ACL' => 'public-read'
-                'ACL' => 'private-read'
+                'ACL' => 'private'
             ], $options);
 
             $request = $client->createPresignedRequest($command, '+10 minutes');
@@ -114,7 +114,7 @@ class Aws
     /**
      * get presigned uri of any file from aws s3 bucket
      *
-     * @param string $getFile
+     * @param  string $getFile
      * @return string ( presignedUri of file )
      */
     public static function presignedUri(string $getFile): string
