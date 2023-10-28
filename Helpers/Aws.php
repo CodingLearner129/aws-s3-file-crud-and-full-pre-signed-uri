@@ -15,7 +15,7 @@ use Exception;
  * get the pre-signed URL of the image and upload the image using the pre-signed URL
  * 
  * @package  Aws
- * @author  Dhruv Parmar <dhruv.intelivita@gmail.com>
+ * @author  Dhruv Parmar <dgparmar1299@gmail.com>
  */
 
 class Aws
